@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [logic,setlogic]=useState(false);
+  const logicsbotten = () =>  {
+    setlogic(!logic);
+  };
+
   return (
+    <main>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <h1>connect</h1>
+
+    
+    <button type="button" onClick={logicsbotten}>לוגיקה ותורת הקבוצות</button>
+   <h1>{logic? "true": "false"}</h1>
+   </div>
+    </main>
   );
 }
 
